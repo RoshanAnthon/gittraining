@@ -1,3 +1,6 @@
+https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+read this book all chapters
+
 create a ssh key
 ssh-keygen -t rsa -b 4096 -C "rapps9999@gmail.com"
 
@@ -62,5 +65,24 @@ git push origin main
 
 to update to latest changes
 git pull
+
+now created a new branch here for data structures
+git branch ds
+git checkout ds
+(you can combine both aboe commands with "git branch -b ds")
+once you are in that branch you can do things
+mkdir data-structures
+cd data-structures
+touch array.cpp
+git status
+git add dta-structures
+git push origin ds
+
+merging (future)
+git checkout main
+git merge ds (solve if any conflicts)
+git status
+git branch -d ds ( to delete the branch)
+
 
 
