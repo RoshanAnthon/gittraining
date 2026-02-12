@@ -1,0 +1,31 @@
+There was lot of confusion around ssh key and etc
+
+What is ssh-key
+-- its a solution for annoying password, thats it.
+-- you create a ssh key and add it to all the servers etc where you need to have password to access. then its easy ( like sudo)
+-- once you do ssh add, you can login to the server passwordlessly, onloy once you have to enter ssh passphrase 
+
+how do you generate ssh key?
+Simple
+
+ssh-keygen -t rsa -b 4096
+-- askd do you want to name --- give name only if you want to maintain multiple ssh keys ( useless) or just enter
+-- this by default saves it to ~/.ssh/ -- give a passpharase which you can remember
+-- then do following everytime to add the ssh 
+-- you can get the key in ~/.ssh/is
+
+eval "$(ssh-agent -s)" --- for mac
+eval `/volume/buildtools/bin/ssh-agent.sh --and-link` --juniper servers
+ssh-add ~/.ssh/id_rsa
+
+now how do you login to other servers:
+For example you wnated to access bnbaas server or qnc server by ssh, dont want to enter password everytime
+ssh-copy-id pereirar@bnbaasshell2 ( enter password only once) --- this will do following
+or
+open ~/.ssh/authorised_keys --- in the server and add your pass-key read obove ( local id_rsa.pub
+
+same way the server keys are used to connect to gerrit etc. for that we have to cat the key pub and copy it then add it to the gerrit.
+
+
+easy, but will confuse a lot
+                                                                                 
