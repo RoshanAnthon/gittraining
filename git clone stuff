@@ -4,6 +4,7 @@ read this book all chapters
 create a ssh key
 -------------------------------------------------
 ssh-keygen -t rsa -b 4096 -C "rapps9999@gmail.com"
+--- never give -C, just generate a local ssh key and add it. by that you can recognise by the key from where you have committed the code
 
 cat /Users/pereirar/.ssh/id_rsa.pub
 
