@@ -28,4 +28,18 @@ same way the server keys are used to connect to gerrit etc. for that we have to 
 
 
 easy, but will confuse a lot
+
+i get asked to add sssh lot many times, mac has following
+
+add below in ssh/config
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+
+killall ssh-agent
+ssh-add --apple-use-keychain ~/.ssh/id_rsa
+
+close and open terminal
                                                                                  
